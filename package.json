@@ -1,0 +1,22 @@
+{
+  "name": "inwara",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "jsonwebtoken": "*",
+    "bcryptjs": "*",
+    "passport-jwt": "*",
+    "cors": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}

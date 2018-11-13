@@ -1,0 +1,52 @@
+<div class="container">
+    <h1 style="text-align:center; color: blueviolet; size: 100px;"><strong>Search Reports</strong></h1><br>
+  <form (submit)="onFindReport()">
+    <label>Enter Category of report you want to search.</label>
+    <input type="text" class="form-control" name="key" [(ngModel)]="key">
+    <input type="submit" class="form-control btn btn-primary" value="Find">
+  </form>
+  <hr>
+</div>
+
+<div *ngIf="title" class="container" id="pdf" #pdf>
+    <h1>
+      Title: <strong>{{title}}</strong>
+    </h1>
+    <br>
+    <h3>Category: <strong>{{category}}</strong></h3>
+    <br>
+    <h3>Author: <strong>{{author}}</strong></h3>
+    <hr>
+    <h2><strong>Report: </strong></h2>
+    <p>{{body}}</p>
+
+</div>
+
+<div *ngIf="!title" class="container">
+    <h1>{{content}}</h1>
+  </div>
+
+  
+<br> <br> <hr> <br>
+<div class="container">
+    <h1 style="text-align:center; color:orangered; size: 100px;"><strong>Register to Download</strong></h1><br>
+
+    <form (submit)="onPdf()">
+        <div class="form-group">
+            <label>Name: </label>
+            <input type="text" name="name" [(ngModel)]="name" class="form-control">
+        </div>
+        <div class="form-group">
+                <label>Email: </label>
+                <input type="text" name="email" [(ngModel)]="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Phone: </label>
+            <input type="text" name="phone" [(ngModel)]="phone" class="form-control">
+        </div>
+        <input type="submit" class="btn btn-primary form control" value="Enter details to download PDF">
+    </form>
+
+</div>
+
+

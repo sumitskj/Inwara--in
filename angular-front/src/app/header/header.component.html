@@ -1,0 +1,18 @@
+
+<nav class="navbar  navbar-inverse navbar-fixed-top navbar-expand-lg navbar-dark">
+    <a  [routerLink]="['/dashboard']"class="nav-link navbar-brand"><img class="img-responsive2"       
+      src="https://ak9.picdn.net/shutterstock/videos/10167629/thumb/11.jpg" style="height: 80px; width: 100px;"></a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto"> 
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" style="padding:0 15px;"><a  class="nav-link" [routerLink]="['/']">Dashboard </a></li>
+      <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a  class="nav-link" [routerLink]="['/reports']">Research Reports </a></li>
+    </ul>
+    <ul class="navbar-nav mr-auto navbar-right">
+      <li *ngIf="!authService.loggedIn()" class="nav-item"  style="padding:0 15px;" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a  class="nav-link" [routerLink]="['/register']">Register </a></li>
+      <li *ngIf="!authService.loggedIn()" class="nav-item"  style="padding:0 15px;" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a  class="nav-link" [routerLink]="['/login']">Login </a></li>
+      <li *ngIf="authService.loggedIn()" class="nav-item"  style="padding:0 15px;" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a  class="nav-link" href="#" (click)="onLogout()">Logout </a></li>
+      <li *ngIf="authService.loggedIn()" class="nav-item" style="padding:0 15px;" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a  class="nav-link" [routerLink]="['/profile']">Profile </a></li>
+
+    </ul>
+  </div>
+</nav>
